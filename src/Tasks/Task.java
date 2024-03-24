@@ -14,6 +14,11 @@ public class Task {
         this.status = status;
     }
 
+    public Task(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public void setStatus(Status status) {
         this.status = status;
     }
