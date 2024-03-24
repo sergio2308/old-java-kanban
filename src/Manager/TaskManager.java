@@ -86,6 +86,16 @@ public class TaskManager {
         newSubTack.setEpicId(epicId);
     }
 
+//    public void createNewSubTask(SubTask subTask) {
+//        int epicId = subTask.getEpicId();
+//        Epic epic = epics.get(epicId);
+//        int newId = idIncrease();
+//        subTask.setId(newId);
+//        subTasks.put(newId, subTask);
+//        epic.addSubTaskId(subTask.getId());
+//        updateEpic(epic);
+//    }
+
     public void updateTask (Task task) {
         tasks.put(task.getId(), task);
     }
@@ -119,13 +129,13 @@ public class TaskManager {
     }
 
     public void updateSubTask (SubTask newSubTask) {
-    SubTask subTaskToUpdate = (SubTask) getSubTaskById(newSubTask.getId());
+        SubTask subTaskToUpdate = (SubTask) getSubTaskById(newSubTask.getId());
 
-    subTaskToUpdate.setStatus(newSubTask.getStatus());
-    addNewSubTask(subTaskToUpdate.getId(), subTaskToUpdate.getEpicId(), subTaskToUpdate);
-    Epic epicToUpdate = (Epic) getEpicById(subTaskToUpdate.getEpicId());
+        subTaskToUpdate.setStatus(newSubTask.getStatus());
+        addNewSubTask(subTaskToUpdate.getId(), subTaskToUpdate.getEpicId(), subTaskToUpdate);
+        Epic epicToUpdate = (Epic) getEpicById(subTaskToUpdate.getEpicId());
 
-    updateEpic(epicToUpdate);
+        updateEpic(epicToUpdate);
     }
 
     public void removeTaskById(int id) {
