@@ -39,10 +39,16 @@ public class TaskManager {
 
     public void clearAllEpics() {
         epics.clear();
+        subTasks.clear();
     }
 
     public void clearAllSubTasks() {
         subTasks.clear();
+        for (Integer epicId : epics.keySet()) {
+            Epic epic = (Epic) getEpicById(epicId);
+            epic.getSubTasksIds().clear();
+            updateEpic(epic);
+        }
     }
 
     public Task getTaskById (int id) {
@@ -136,11 +142,14 @@ public class TaskManager {
     }
 
     public void removeSubTaskById(int id) {
+        Epic epic = (Epic) getEpicById(subTasks.get(id).getEpicId());
+        epic.getSubTasksIds().clear();
+        updateEpic(epic);
         subTasks.remove(id);
     }
 
     public void getEpicSubTasks (int id) {
-        Epic epic = (Epic) epics.get(id);
+        Epic epic = epics.get(id);
         ArrayList<Integer> subTasksIds = epic.getSubTasksIds();
         for (Integer subTaskId : subTasksIds) {
             subTasks.get(subTaskId);

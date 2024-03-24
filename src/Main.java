@@ -1,10 +1,10 @@
-import Manager.TaskManager;//Добрый день. Если это не слишком нагло, вы немогли бы зачесть работу, чтобы открылся 5
-import Tasks.Epic;         //спринт? В этом случае мне разрешат пройти его на каникулах. Я отстал от группы на пару
-import Tasks.Status;       //недель, не хотелось бы менять наставника и группу. Если нет больших косяков, конечно.
-import Tasks.SubTask;      //Я поправлю все по вашим замечаниям. Проблема с лишними id эпиков в сабтасках уйдет, после
-import Tasks.Task;         //удаления проверок из Main, насколько я понял. Но на функционал это не влияет, вроде бы.
-                           //Вообще, такая проверка печатью немного мешает нормально посторить логику программы, мне
-public class Main {        //кажется. Интуитивно кажется, что можно все сделать проще чем в ТЗ, а то немного запутался.
+import Manager.TaskManager;
+import Tasks.Epic;
+import Tasks.Status;
+import Tasks.SubTask;
+import Tasks.Task;
+
+public class Main {
     public static void main(String[] args) {
     TaskManager taskManager = new TaskManager();
 
@@ -56,12 +56,17 @@ public class Main {        //кажется. Интуитивно кажется
     System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
     System.out.println("Список эпиков: " + taskManager.getEpics().toString());
     System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
-
-    taskManager.removeTaskById(task1.getId());
-    taskManager.removeEpicById(epic1.getId());
-
-    System.out.println();
-    System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
+//
+//    taskManager.removeTaskById(task1.getId());
+//    taskManager.removeEpicById(epic1.getId());
+//
+//    System.out.println();
+//    System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
+//    System.out.println("Список эпиков: " + taskManager.getEpics().toString());
+//    System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
+//
+//    taskManager.clearAllSubTasks();
+    taskManager.removeSubTaskById(7);
     System.out.println("Список эпиков: " + taskManager.getEpics().toString());
     System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
     }
