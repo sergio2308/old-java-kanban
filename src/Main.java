@@ -56,18 +56,18 @@ public class Main {
     System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
     System.out.println("Список эпиков: " + taskManager.getEpics().toString());
     System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
-//
-//    taskManager.removeTaskById(task1.getId());
-//    taskManager.removeEpicById(epic1.getId());
-//
-//    System.out.println();
-//    System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
-//    System.out.println("Список эпиков: " + taskManager.getEpics().toString());
-//    System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
-//
-//    taskManager.clearAllSubTasks();
-    taskManager.removeSubTaskById(7);
+
+    taskManager.removeTaskById(task1.getId());
+    taskManager.removeEpicById(epic1.getId());
+
+    System.out.println();
+    System.out.println("Список обычных задач: " + taskManager.getTasks().toString());
     System.out.println("Список эпиков: " + taskManager.getEpics().toString());
     System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
+
+    taskManager.clearAllSubTasks();
+//    taskManager.removeSubTaskById(7);
+  //  System.out.println("Список эпиков: " + taskManager.getEpics().toString());
+    //System.out.println("Список подзадач: " + taskManager.getSubTasks().toString());
     }
 }

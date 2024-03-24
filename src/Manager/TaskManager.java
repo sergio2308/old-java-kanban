@@ -21,16 +21,16 @@ public class TaskManager {
         this.subTasks = new HashMap<Integer, SubTask>();
     }
 
-    public HashMap<Integer, Task> getTasks() {
-        return tasks;
+    public ArrayList<Task> getTasks() {
+        return new ArrayList<>(tasks.values());
     }
 
-    public HashMap<Integer, Epic> getEpics() {
-        return epics;
+    public ArrayList<Epic> getEpics() {
+        return new ArrayList<>(epics.values());
     }
 
-    public HashMap<Integer, SubTask> getSubTasks() {
-        return subTasks;
+    public ArrayList<SubTask> getSubTasks() {
+        return new ArrayList<>(subTasks.values());
     }
 
     public void clearAllTasks() {
