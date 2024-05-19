@@ -1,4 +1,4 @@
-import Manager.TaskManager;
+import Manager.InMemoryTaskManager;
 import Tasks.Epic;
 import Tasks.Status;
 import Tasks.SubTask;
@@ -6,7 +6,7 @@ import Tasks.Task;
 
 public class Main {
     public static void main(String[] args) {
-        TaskManager taskManager = new TaskManager();
+        InMemoryTaskManager taskManager = new InMemoryTaskManager();
 
         Task task1 = new Task("Покупка продуктов", "Помидоры, молоко, хлеб, чай", Status.NEW);
         Task task2 = new Task("Оправить посылку", "Сходить на почту и отправить посылку", Status.NEW);
