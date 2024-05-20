@@ -36,5 +36,6 @@ public class Main {
         taskManager.updateSubTask(subTask1, epic1.getId());
         taskManager.updateEpic(epic1);
         System.out.println(epic1.toString());
+        System.out.println(taskManager.getSubTaskById(subTask1.getId()));
     }
 }
