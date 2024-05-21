@@ -1,4 +1,7 @@
+import Manager.HistoryManager;
+import Manager.InMemoryHistoryManager;
 import Manager.InMemoryTaskManager;
+import Manager.Managers;
 import Tasks.Epic;
 import Tasks.Status;
 import Tasks.SubTask;
@@ -37,5 +40,6 @@ public class Main {
         taskManager.updateEpic(epic1);
         System.out.println(epic1.toString());
         System.out.println(taskManager.getSubTaskById(subTask1.getId()));
+        System.out.println(taskManager.getHistory());
     }
 }
