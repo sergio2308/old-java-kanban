@@ -1,8 +1,8 @@
-import Manager.HistoryManager;
-import Manager.InMemoryHistoryManager;
-import Manager.InMemoryTaskManager;
-import Manager.Managers;
-import Tasks.Epic;
+import Manager.HistoryManager;          //Добрый день. Александр, спасибо. Я написал вам в пачке, на всякий случай
+import Manager.InMemoryHistoryManager;  //продублирую тут. Судя по всему, не запушились изменения, хотя в терминале
+import Manager.InMemoryTaskManager;     //все было Ок. Но я не проверил сам репозиторий на Гитхабе, перед отправкой.
+import Manager.Managers;                //Я все поправил сегодня. А тесты уже были. Получается, они еще вчера не запушились.
+import Tasks.Epic;                      //Буду разбираться. Этот код загрузил архивом через Практикум.
 import Tasks.Status;
 import Tasks.SubTask;
 import Tasks.Task;
